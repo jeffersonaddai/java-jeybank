@@ -1,6 +1,6 @@
-package org.jeybank.classes;
+package org.addai_poku.jeybank.classes;
 
-import org.jeybank.interfaces.IBranch;
+import org.addai_poku.jeybank.interfaces.IBranch;
 
 import java.util.ArrayList;
 
@@ -25,8 +25,8 @@ public class Branch implements IBranch {
 
     @Override
     public boolean newCustomer(String customerName, double initialTransaction) {
-//        check if customer does not exist already
-        if(findCustomer(customerName)==null){
+//        check if customer does not exist already. Do not allow empty strings to be passed as names
+        if(findCustomer(customerName)==null && !customerName.equals("")){
 //            create a new arrayList of transactions
             ArrayList<Double> transactions = new ArrayList<>();
 //            create new customer object with customer name and the new transactions arraylist

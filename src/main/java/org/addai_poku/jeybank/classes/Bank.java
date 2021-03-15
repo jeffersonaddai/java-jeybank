@@ -1,6 +1,6 @@
-package org.jeybank.classes;
+package org.addai_poku.jeybank.classes;
 
-import org.jeybank.interfaces.IBank;
+import org.addai_poku.jeybank.interfaces.IBank;
 
 import java.util.ArrayList;
 

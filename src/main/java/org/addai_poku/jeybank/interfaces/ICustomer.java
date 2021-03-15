@@ -1,4 +1,4 @@
-package org.jeybank.interfaces;
+package org.addai_poku.jeybank.interfaces;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package org.jeybank.classes;
+package org.addai_poku.jeybank.classes;
 
 import org.junit.After;
 import org.junit.Before;
@@ -35,6 +35,8 @@ public class BankTest {
     public void addCustomer() {
 //        try to add a new customer
         assertTrue(bank.addCustomer("First Branch","customer2", 200.0));
+//      should not be able to add a customer with empty name
+        assertFalse(bank.addCustomer("First Branch","", 200.0));
 //        should return false if branch doesn't exist
         assertFalse(bank.addCustomer("Unknown Branch", "customer3", 100.0));
 //        should return false if customer already exist in the branch

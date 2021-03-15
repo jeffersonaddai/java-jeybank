@@ -1,4 +1,4 @@
-package org.jeybank.classes;
+package org.addai_poku.jeybank.classes;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -17,13 +17,13 @@ public class BranchTest {
     @Test
     public void getName() {
 //        check if the name is the same as the one assigned
-        assertEquals(branch.getName(), "First Branch");
+        assertEquals( "First Branch", branch.getName());
     }
 
     @Test
     public void getCustomers() {
 //        the name of the first customer in the returned customers array list must be "customer1"
-        assertEquals(branch.getCustomers().get(0).getName(), "customer1");
+        assertEquals("customer1", branch.getCustomers().get(0).getName());
     }
 
     @Test
@@ -36,7 +36,7 @@ public class BranchTest {
 
     @Test
     public void addCustomerTransaction() {
-//        must not be able to add if name customer name does not exist
+//        must not be able to add if customer name does not exist
         assertFalse(branch.addCustomerTransaction("unknown", 100.0));
 //        must not be able to add if transaction is less than or equal to 0
         assertFalse(branch.addCustomerTransaction("customer1", -1));

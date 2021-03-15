@@ -1,4 +1,4 @@
-package org.jeybank.classes;
+package org.addai_poku.jeybank.classes;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -21,15 +21,15 @@ public class CustomerTest {
     @Test
     public void getName() {
 //        name should be same as customer1
-        assertEquals(customer.getName(), "customer1");
-//        should return false because name is not "unknown"
-        assertNotEquals(customer.getName(), "unknown");
+        assertEquals("customer1", customer.getName());
+//        should not equal because name is not "unknown"
+        assertNotEquals("unknown", customer.getName());
     }
 
     @Test
     public void getTransactions() {
 //        transactions returned must be equal to local variable transactions
-        assertEquals(customer.getTransactions(), transactions);
+        assertEquals(transactions, customer.getTransactions());
     }
 
     @Test

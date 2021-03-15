@@ -1,4 +1,4 @@
-package org.jeybank.interfaces;
+package org.addai_poku.jeybank.interfaces;
 
 public interface IBank {
     boolean addBranch(String branchName);
