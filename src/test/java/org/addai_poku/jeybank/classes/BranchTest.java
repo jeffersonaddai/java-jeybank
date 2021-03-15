@@ -44,5 +44,7 @@ public class BranchTest {
         assertFalse(branch.addCustomerTransaction("customer1", -1));
 //        must be able to add
         assertTrue(branch.addCustomerTransaction("customer1", 100.0));
+//        must be able to add even for different case of the customerName
+        assertTrue(branch.addCustomerTransaction("Customer1", 100.0));
     }
 }

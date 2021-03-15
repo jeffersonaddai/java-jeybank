@@ -35,6 +35,9 @@ public class BankTest {
     public void addCustomer() {
 //        try to add a new customer
         assertTrue(bank.addCustomer("First Branch","customer2", 200.0));
+//        should be able to add irrespective of the case of the branch name
+        assertTrue(bank.addCustomer("FIRST Branch","customer4", 200.0));
+
 //      should not be able to add a customer with empty name
         assertFalse(bank.addCustomer("First Branch","", 200.0));
 //        should return false if branch doesn't exist

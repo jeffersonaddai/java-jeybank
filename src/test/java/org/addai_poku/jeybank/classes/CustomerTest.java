@@ -9,12 +9,9 @@ import static org.junit.Assert.*;
 
 public class CustomerTest {
     Customer customer;
-    ArrayList<Double> transactions;
     @Before
     public void setUp() throws Exception {
-
         customer = new Customer("customer1", 100.0);
-
     }
 
     @Test
@@ -27,8 +24,8 @@ public class CustomerTest {
 
     @Test
     public void getTransactions() {
-//        transactions returned must be equal to local variable transactions
-        assertEquals(transactions, customer.getTransactions());
+//        index 0 of the transactions returned must be equal to 100.0
+        assertEquals(100.0, (double)customer.getTransactions().get(0), 0.0);
     }
 
     @Test
