@@ -30,7 +30,7 @@ public class BranchTest {
     public void newCustomer() {
 //        must not be able to add if name already exist; must return false
         assertFalse(branch.newCustomer("customer1", 100.0));
-//        should be abel to add a new customer and return true
+//        should be able to add a new customer and return true
         assertTrue(branch.newCustomer("customer2", 200.0));
     }
 
