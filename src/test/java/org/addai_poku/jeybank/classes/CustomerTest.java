@@ -12,9 +12,8 @@ public class CustomerTest {
     ArrayList<Double> transactions;
     @Before
     public void setUp() throws Exception {
-        transactions = new ArrayList<>();
-        transactions.add(100.0);
-        customer = new Customer("customer1", transactions);
+
+        customer = new Customer("customer1", 100.0);
 
     }
 

@@ -45,7 +45,7 @@ public class Bank implements IBank {
         //        check if the branch exists
         if(findBranch(branchName) != null){
 //            add the transaction to the customer in the branch and return true
-//            if customer does not exist addCustomerTransaction() would return false
+//            if customer does not exist or transaction is negative addCustomerTransaction() would return false
             return findBranch(branchName).addCustomerTransaction(customerName, transaction);
         }
 //        otherwise branch does not exist return false
@@ -85,7 +85,7 @@ public class Bank implements IBank {
         //        loop through the branches array list
         for(Branch branch: this.branches){
 //            check if the current name is equal to the provided branchName
-            if(branch.getName().equals(branchName)){
+            if(branch.getName().equalsIgnoreCase(branchName)){
 //                return the branch object if the name matches
                 return branch;
             }

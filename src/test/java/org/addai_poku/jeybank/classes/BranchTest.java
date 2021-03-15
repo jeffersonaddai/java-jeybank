@@ -32,6 +32,8 @@ public class BranchTest {
         assertFalse(branch.newCustomer("customer1", 100.0));
 //        should be able to add a new customer and return true
         assertTrue(branch.newCustomer("customer2", 200.0));
+//        should not be able to add a new customer with empty string.
+        assertFalse(branch.newCustomer("", 200.0));
     }
 
     @Test

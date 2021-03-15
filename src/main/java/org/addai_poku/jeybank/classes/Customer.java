@@ -8,19 +8,17 @@ public class Customer implements ICustomer {
     private String name;
     private ArrayList<Double> transactions;
 
-    public Customer(String name, ArrayList<Double> transactions) {
+    public Customer(String name, double initialTransaction) {
+//        set initial transaction to 0 if the value provided is negative
+        initialTransaction = initialTransaction < 0 ? 0 : initialTransaction;
 //        empty strings should not be allowed to be used as customer names
-        if(!name.equals("")){
+        if (!name.equals("")) {
             this.name = name;
-//        check if null object is not passed as argument to the constructor
-            if(transactions != null){
-                this.transactions = transactions;
-            }
-//        if null instantiate an ArrayList<Double> object and assign to transactions.
-            else this.transactions = new ArrayList<>();
-
+//            instantiate the transactions arrayList
+            this.transactions = new ArrayList<>();
+//            add the initialTransaction to the arrayList
+            this.transactions.add(initialTransaction);
         }
-
 
     }
 
@@ -36,6 +34,10 @@ public class Customer implements ICustomer {
 
     @Override
     public void addTransaction(Double transaction) {
-        this.transactions.add(transaction);
+//        don't allow negative transactions.
+        if (transaction >= 0) {
+            this.transactions.add(transaction);
+        }
+
     }
 }
