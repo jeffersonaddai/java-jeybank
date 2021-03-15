@@ -16,7 +16,8 @@ public class Bank implements IBank {
     @Override
     public boolean addBranch(String branchName) {
         //        check if customer does not exist already
-        if(findBranch(branchName)==null){
+//        don't allow branch without names to be added
+        if(findBranch(branchName)==null && !branchName.equals("")){
 //            create new branch object with branch name
             Branch branch = new Branch(branchName);
 
