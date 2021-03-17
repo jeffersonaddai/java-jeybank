@@ -11,14 +11,12 @@ public class Customer implements ICustomer {
     public Customer(String name, double initialTransaction) {
 //        set initial transaction to 0 if the value provided is negative
         initialTransaction = initialTransaction < 0 ? 0 : initialTransaction;
-//        empty strings should not be allowed to be used as customer names
-        if (!name.equals("")) {
-            this.name = name;
+
+        this.name = name;
 //            instantiate the transactions arrayList
-            this.transactions = new ArrayList<>();
+        this.transactions = new ArrayList<>();
 //            add the initialTransaction to the arrayList
-            this.transactions.add(initialTransaction);
-        }
+        this.transactions.add(initialTransaction);
 
     }
 

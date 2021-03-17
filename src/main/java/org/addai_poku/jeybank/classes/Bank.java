@@ -10,7 +10,7 @@ public class Bank implements IBank {
 
     public Bank(String name) {
         this.name = name;
-        this.branches = new ArrayList<Branch>();
+        this.branches = new ArrayList<>();
     }
 
     @Override
@@ -21,7 +21,7 @@ public class Bank implements IBank {
 //            create new branch object with branch name
             Branch branch = new Branch(branchName);
 
-//            add the customer to the customers field and return true
+//            add the branch to the branches field and return true
             this.branches.add(branch);
             return true;
         }
