@@ -24,8 +24,8 @@ public class BankTest {
 
     @Test
     public void addBranch() {
-
-//        should be able to add and return true
+//        This method adds a new branch to the Bank object
+//        should be able to add and return true since its a new branch
         assertTrue(bank.addBranch("New Branch"));
 //        should not be able to add and return false because branch already exist
         assertFalse(bank.addBranch("First Branch"));
